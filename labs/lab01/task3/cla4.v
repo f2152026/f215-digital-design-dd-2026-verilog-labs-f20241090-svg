@@ -47,25 +47,25 @@ module cla4(
   
   and #2 (t01,p0,cin);
   or  #2 (c1,g0,t01);
-  and #2 (sum[0],p0,cin);
+  xor #2 (sum[0],p0,cin);
 
   and #2 (t11,p0,p1,cin);
   and #2 (t12,p1,g0);
   or  #2 (c2,g1,t11,t12);
-  and #2 (sum[1],p1,c1);
+  xor #2 (sum[1],p1,c1);
 
   and #2 (t21,p0,p1,p2,cin);
   and #2 (t22,p2,p1,g0);
   and #2 (t23,p2,g1);
   or  #2 (c3,g2,t21,t22,t23);
-  and #2 (sum[2],p2,c2);
+  xor #2 (sum[2],p2,c2);
 
   and #2 (t31,p0,p1,p2,p3,cin);
   and #2 (t32,p3,p2,p1,g0);
   and #2 (t33,p3,p2,g1);
   and #2 (t34,p3,g2);
   or  #2 (cout,g3,t31,t32,t33,t34);
-  and #2 (sum[3],p3,c3);
+  xor #2 (sum[3],p3,c3);
   
 
 
