@@ -30,7 +30,7 @@ module tb;
   end
 
   initial begin
-    t_a = 4'b0000; t_b = 4'b0000; t_cin = 0;
+    t_a = 4'b0000; t_b = 4'b0000; t_cin = 1'b0;
     #20 t_a = 4'b0111; t_b = 4'b0001; t_cin = 0;   // carry ripples through c1,c2,c3
     #20 t_a = 4'b1111; t_b = 4'b0001; t_cin = 0;   // sum=0000, cout=1
     #20 t_a = 4'b0101; t_b = 4'b0011; t_cin = 1;
