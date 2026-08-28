@@ -67,6 +67,7 @@ module cla4(
   and #2 (t34,p3,g2);
   or  #2 (cout,g3,t31,t32,t33,t34);
   and #2 (sum[3],p3,c3);
+  
 
 
 
