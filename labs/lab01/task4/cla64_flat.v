@@ -14,7 +14,7 @@ module cla64_flat(
 
   wire [63:0] p, g;
   wire [64:0] c;   // c[1]..c[64] are the 64 carries; think of cin as c[0]
-  assign c0=cin;
+  assign c[0]=cin;
   // ---------------------------------------------------------------------
   // Step 1: generate/propagate signals -- WORKED EXAMPLE
   //
@@ -2338,7 +2338,7 @@ module cla64_flat(
   assign cout = c[64];
    
   generate
-    for (i = 0; i < 64; i = i + 1) begin : gen_pg
+    for (i = 0; i < 64; i = i + 1) begin : gen_sum
       xor #(2) (sum[i], p[i], c[i]);
       
     end
