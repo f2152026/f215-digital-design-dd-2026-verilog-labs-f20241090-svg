@@ -17,7 +17,11 @@ module comp2 (
 );
 
   assign EQ = (A == B);
-  assign GT = (A >= B);
+//  assign GT = (A >= B);
+  assign GT = (A >  B); // Fixed: changed from >= to >
   assign LT = (A <  B);
 
 endmodule
+// BUG
+// Because GT was implemented with >= instead of >, it incorrectly asserts 1 when $A$ equals $B$, 
+// violating the requirement that exactly one output must be active at any given time.
